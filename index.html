@@ -1,1 +1,29 @@
-Hello World
+---
+layout: default
+title: Astharot15 Blog
+---
+
+<div class="container">
+  <header>
+    <h1>Bienvenido a Mi Sitio Web</h1>
+    <p>Explora y descubre contenido interesante.</p>
+  </header>
+
+  <section class="content">
+    <h2>Sobre mí</h2>
+    <p>Soy un apasionado de la tecnología, el desarrollo web y la creatividad digital.</p>
+
+    <h2>Últimos posts</h2>
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%d de %B de %Y" }}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 - Creado con Jekyll y el tema Midnight</p>
+  </footer>
+</div>
