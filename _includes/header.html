@@ -1,6 +1,9 @@
-<header>
-  <div class="container">
-    <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
-    <p>{{ site.description }}</p>
+<header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <nav class="site-nav">
+      <a href="{{ site.baseurl }}/">Posts</a>
+      <a href="{{ site.baseurl }}/acerca-de">About me</a>
+    </nav>
   </div>
 </header>

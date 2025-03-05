@@ -1,0 +1,132 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #111; /* Fondo oscuro para el cuerpo */
+  color: #fff; /* Texto blanco para legibilidad */
+}
+
+/* Estilos para el wrapper (usado en header y contenido principal) */
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Estilos para el header */
+.site-header {
+  background-color: #000;
+  color: #0f0; /* Verde "hacker" sutil */
+  font-family: 'Courier New', Courier, monospace;
+  padding: 15px 0;
+  border-bottom: 1px solid #333; /* Línea tenue para separación */
+}
+
+.site-header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-size: 24px;
+  text-decoration: none;
+  color: #0f0;
+}
+
+.site-nav a {
+  color: #0f0;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.site-nav a:hover {
+  color: #fff; /* Cambio a blanco al pasar el mouse */
+  text-decoration: underline;
+}
+
+/* Estilos para el contenido principal */
+.page-content {
+  padding: 30px 0;
+  font-family: 'Arial', Helvetica, sans-serif; /* Fuente legible para el contenido */
+}
+
+h1, h2, h3 {
+  font-family: 'Courier New', Courier, monospace;
+  color: #0f0; /* Verde para los títulos */
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Estilos para el footer */
+.site-footer {
+  background-color: #000;
+  color: #0f0;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #333;
+}
+
+.binary {
+  font-size: 12px;
+  color: #666; /* Gris para que sea sutil */
+  margin-top: 5px;
+}
+
+.posts {
+  margin-top: 40px;
+}
+
+.posts h2 {
+  font-family: 'Courier New', Courier, monospace;
+  color: #0f0; /* Verde hacker */
+  margin-bottom: 20px;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.post-card {
+  background-color: #222; /* Fondo oscuro */
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px); /* Elevación al pasar el ratón */
+  box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3); /* Sombra verde */
+}
+
+.post-card h3 {
+  font-family: 'Courier New', Courier, monospace;
+  color: #0f0;
+  margin-top: 0;
+}
+
+.post-card p {
+  font-family: 'Arial', Helvetica, sans-serif;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.read-more {
+  display: inline-block;
+  background-color: #0f0; /* Verde */
+  color: #000;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #fff; /* Blanco al pasar el ratón */
+}
