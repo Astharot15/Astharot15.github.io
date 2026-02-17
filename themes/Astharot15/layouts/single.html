@@ -1,0 +1,25 @@
+{{ define "main" }}
+<article class="post-full">
+    <header>
+        <h1>{{ .Title }}</h1>
+        <div class="meta">
+            Published: {{ .Date.Format "January 2, 2006" }} 
+            {{ with .Params.author }} | Author: {{ . }}{{ end }}
+        </div>
+    </header>
+    
+    <section class="content">
+        {{ .Content }}
+    </section>
+
+    <footer class="post-footer">
+        {{ with .Params.tags }}
+        <ul class="tags">
+            {{ range . }}
+            <li><a href="/tags/{{ . | urlize }}">#{{ . }}</a></li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </footer>
+</article>
+{{ end }}

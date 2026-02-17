@@ -1,0 +1,205 @@
+/* Custom properties for the "Angel/Hacker" aesthetic */
+:root {
+    --bg-color: #1a1a1b;          /* Deep dark gray from the train shadows */
+    --accent-color: #a68d7a;      /* Desaturated gold/brown from the hoodie */
+    --text-primary: #e0e0e0;      /* Soft white */
+    --text-secondary: #8a8a8a;    /* Muted gray for metadata */
+    --card-bg: rgba(40, 40, 42, 0.7); /* Translucent gray for a smoky feel */
+    --border-color: #3e3e40;      /* Subtle separation */
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    margin: 0;
+    /* Subtle radial gradient to mimic the light coming from the train doors */
+    background: radial-gradient(circle at top, #2c2c2e 0%, #1a1a1b 70%);
+    background-attachment: fixed;
+}
+
+/* Header & Nav */
+header {
+    padding: 2rem 10%;
+    border-bottom: 1px solid var(--border-color);
+    background: rgba(26, 26, 27, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+    text-shadow: 0 0 8px rgba(166, 141, 122, 0.5);
+}
+
+/* Main Content Container */
+main {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 5rem;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(166, 141, 122, 0.15) 0%, rgba(44, 44, 46, 0.8) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(166, 141, 122, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: drift 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(to bottom, #ffffff, var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 1px;
+}
+
+.hero .tagline {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Post Cards (Smoky/Glassmorphism) */
+article {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: var(--accent-color);
+}
+
+article h2 a, article h3 a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+time {
+    display: block;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+/* Content & Typography */
+.content code {
+    background: #000;
+    color: #d19a66; /* Classic Monokai-ish tone */
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+}
+
+.content pre {
+    background: #000;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    border: 1px solid var(--border-color);
+}
+
+/* Taxonomy/Tags */
+.tags {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 2rem;
+}
+
+.tags li a {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 0.2rem 0.6rem;
+    text-decoration: none;
+}
+
+.tags li a:hover {
+    background: var(--accent-color);
+    color: #000;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 4rem 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+}

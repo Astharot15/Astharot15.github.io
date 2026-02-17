@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="hero">
+    <div class="hero-content">
+        <h1>Explore</h1>
+        <p class="tagline">A Deep Dive Into Everything</p>
+    </div>
+</section>
+
+<div class="post-list">
+    {{ range .Site.RegularPages }}
+    <article>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+    </article>
+    {{ else }}
+    <p>No posts yet.</p>
+    {{ end }}
+</div>
+{{ end }}

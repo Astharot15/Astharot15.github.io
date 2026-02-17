@@ -1,0 +1,14 @@
+baseURL = 'https://Astharot15.github.io/'
+languageCode = 'en-US'
+title = 'Astharot'
+
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = '0.146.0'

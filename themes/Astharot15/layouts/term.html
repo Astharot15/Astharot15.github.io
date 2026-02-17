@@ -1,0 +1,11 @@
+{{ define "main" }}
+<h1>Research tagged with: "{{ .Title }}"</h1>
+<div class="term-list">
+    {{ range .Pages }}
+    <article>
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Summary }}</p>
+    </article>
+    {{ end }}
+</div>
+{{ end }}
