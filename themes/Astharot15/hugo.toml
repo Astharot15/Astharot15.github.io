@@ -10,5 +10,5 @@ title = 'Astharot'
 
 [module]
   [module.hugoVersion]
-    extended = false
-    min = '0.146.0'
+    extended = true
+    min = '0.128.0'
