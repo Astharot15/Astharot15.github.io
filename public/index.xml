@@ -6,6 +6,14 @@
     <description>Recent content on Astharot</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 18 Feb 2026 15:42:02 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kernel Level Keylogger</title>
+      <link>http://localhost:1313/posts/keylogger/</link>
+      <pubDate>Wed, 18 Feb 2026 15:42:02 +0000</pubDate>
+      <guid>http://localhost:1313/posts/keylogger/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Disclaimer: I am not a native English speaker and I do not like to use AI, so everything is hand written by me.&#xD;&#xA;Disclaimer: There is not any code from my keylogger, for now it will keep private and everything explained in the post is the theoretical approach to kernel level keyloggers.&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In this post I am talking about how keystrokes work and how I used it to create a kernel level keylogger with a very simple technique, a filter driver. I created this driver for the &lt;a href=&#34;https://hackon.es&#34;&gt;HackOn&lt;/a&gt; CTF (my university CTF) as a reversing challenge where players had to discover how it works and type the flag to deactivate the keylogger, creating a scenario where an attacker had a way to avoid self-infection.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

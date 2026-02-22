@@ -5,6 +5,7 @@
         <div class="meta">
             Published: {{ .Date.Format "January 2, 2006" }} 
             {{ with .Params.author }} | Author: {{ . }}{{ end }}
+            <span class="reading-time">• {{ .ReadingTime }} min read</span>
         </div>
     </header>
     

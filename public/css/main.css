@@ -58,6 +58,16 @@ nav a {
     transition: 0.3s;
 }
 
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 nav a:hover {
     color: var(--accent-color);
     text-shadow: 0 0 8px rgba(166, 141, 122, 0.5);
@@ -105,6 +115,16 @@ article h2 a, article h3 a {
     color: var(--text-primary);
     text-decoration: none;
     font-size: 1.5rem;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.post-description {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin: 0.8rem 0;
 }
 
 time {
@@ -113,6 +133,12 @@ time {
     font-family: var(--font-mono);
     font-size: 0.85rem;
     margin-bottom: 1rem;
+}
+
+.reading-time {
+    color: var(--accent-color);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
 }
 
 /* Content & Typography */

@@ -10,6 +10,7 @@
     {{ range .Site.RegularPages }}
     <article>
         <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        {{ if .Params.description }}<p class="post-description">{{ .Params.description }}</p>{{ end }}
         <time>{{ .Date.Format "Jan 2, 2006" }}</time>
     </article>
     {{ else }}
